@@ -1,28 +1,43 @@
-package Loops;
+package HackerRank;
 
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.sql.Array;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
 
 import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
 
-class Result {
+class Loop {
 
     /*
      * Complete the 'plusMinus' function below.
      *
      * The function accepts INTEGER_ARRAY arr as parameter.
      */
+    public static void main(String[] args) {
 
-    public static void plusMinus(List<Integer> arr) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("please enter integer value between 0-100 ");
+        int n = scanner.nextInt();
+
+        if (n <= 0 || n > 100) {
+            System.exit(-1);
+        }
+
+        int[] arr1 = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.println("please enter integer value between -100 till +100 ");
+            int  input = scanner.nextInt();//1, 1, 0, -1, -1
+            if (input>100 || input<-100){
+                System.exit(-1);
+            }
+            arr1[i] =input;
+
+
+
+
+        }
+        //arr-arr1-arr2
+
+
+        // int[] arr1 = {1, 1, 0, -1, -1};
 
         /*
         1-kullanicidan n tane sayi al. n o 0 ile 100 esit arasinda
@@ -33,8 +48,7 @@ class Result {
          negatif toplam syisi bolu n, pozitif bolu n, zero bolu
           sonuc direk ekrandan*/
 
-        int n = 5;
-        int[] arr1 = {1, 1, 0, -1, -1};
+
         int negativeCount = 0;
         int positiveCount = 0;
         int zeroCount = 0;
@@ -48,31 +62,25 @@ class Result {
                 positiveCount++;
             }
         }
-        double negativeRatio = (double) negativeCount / n;
+
         double positiveRatio = (double) positiveCount / n;
+        double negativeRatio = (double) negativeCount / n;
         double zeroRatio = (double) zeroCount / n;
 
-        System.out.println(negativeRatio);
-        System.out.println(positiveRatio);
-        System.out.println(zeroRatio);
+        System.out.printf("%.6f\n", positiveRatio);
+        System.out.printf("%.6f\n", negativeRatio);
+        System.out.printf("%.6f\n", zeroRatio);
 
         //-100 till 100 write one array
         // dondur her bir arrayi n=index i=arrrayin variable
         //int[] arr1= {3,4,5,6,7};
+//0.400000
+//0.400000
+//0.200000
     }
+
 
 }
 
-public class Solution1 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-        int n = Integer.parseInt(bufferedReader.readLine().trim());
 
-        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" ")).map(Integer::parseInt).collect(toList());
-
-        Result.plusMinus(arr);
-
-        bufferedReader.close();
-    }
-}
