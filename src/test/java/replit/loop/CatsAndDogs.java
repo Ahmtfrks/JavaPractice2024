@@ -1,4 +1,4 @@
-package Loops;
+package Replit;
 
 import java.util.Scanner;
 
