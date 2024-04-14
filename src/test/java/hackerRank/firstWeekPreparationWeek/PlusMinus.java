@@ -1,4 +1,4 @@
-package hackerRank;
+package hackerRank.firstWeekPreparationWeek;
 
 import java.io.*;
 import java.util.*;
@@ -95,7 +95,7 @@ class Result {
 
 }
 
-public class Solution {
+public class PlusMinus {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
