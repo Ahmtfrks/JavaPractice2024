@@ -106,5 +106,9 @@ public class PlusMinus {
         Result.plusMinus(arr);
 
         bufferedReader.close();
+
+        StringBuffer stringBuffer=new StringBuffer("sjklfjsdlk");
+
+        stringBuffer=new StringBuffer("mujgan");
     }
 }
